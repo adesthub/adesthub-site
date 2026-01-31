@@ -407,6 +407,11 @@ footer {
   font-weight: 600;
 }
 
+.footer-copy {
+  text-align: center;
+  margin-top: 28px;
+}
+
 .social-icon {
   width: 22px;
   height: 22px;

@@ -52,20 +52,10 @@
         <a href="#domains">Our Domains</a>
         <a href="#framework">Framework</a>
         <a href="#work">Our Work</a>
-        <a class="lang-mobile" href="pages/ar.htm" lang="ar" dir="rtl">
-          <span class="flag" aria-hidden="true">🇸🇦</span>
-          العربية
-        </a>
       </nav>
       <div class="nav-actions">
-        <div class="lang-switcher" aria-label="Language switcher">
-          <a href="pages/ar.htm" lang="ar" dir="rtl">
-            <span class="flag" aria-hidden="true">🇸🇦</span>
-            العربية
-          </a>
-        </div>
         <a class="cta" href="https://calendly.com/adesthub/30min" target="_blank" rel="noopener noreferrer">Start a Project</a>
-        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav" data-open-label="Open menu" data-close-label="Close menu">
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
           <span></span>
           <span></span>
           <span></span>
@@ -80,7 +70,7 @@
         <div>
           <h1>Supercharge Your Digital Impact</h1>
           <p>
-            Adest Hub is a full-service digital partner built to amplify ambitious brands.
+            Adest Hub is a full-service digital partner ready to amplify ambitious brands.
             We blend strategy, design, content, and performance to deliver measurable growth.
           </p>
           <div class="hero-actions">
@@ -203,7 +193,7 @@
         <img class="logo-mark logo-mark--footer" src="images/primaryLogo.png" alt="Adest Hub logo" />
       </div>
       <div>
-        <p>hello@adesthub.com</p>
+        <p><a href="mailto:hello@adesthub.com">hello@adesthub.com</a></p>
         <p>Remote-first, serving clients worldwide.</p>
       </div>
       <div class="footer-social" aria-label="Social media">
@@ -219,9 +209,10 @@
         </a>
       </div>
       <div>
-        <a class="cta footer-cta" href="https://calendly.com/adesthub/30min" target="_blank" rel="noopener noreferrer">Start a Project</a>
+        <a href="https://calendly.com/adesthub/30min" target="_blank" rel="noopener noreferrer">Start a Project</a>
       </div>
     </div>
+    <p class="footer-copy">&copy; 2026 Adest Hub. All rights reserved.</p>
     <p class="sr-only">Adest Hub is a digital partner specializing in branding, strategy, and performance marketing.</p>
   </footer>
   <script>
@@ -232,17 +223,14 @@
       navToggle.addEventListener("click", () => {
         const isOpen = navLinks.classList.toggle("is-open");
         navToggle.setAttribute("aria-expanded", String(isOpen));
-        navToggle.setAttribute(
-          "aria-label",
-          isOpen ? navToggle.dataset.closeLabel : navToggle.dataset.openLabel
-        );
+        navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
       });
 
       navLinks.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
           navLinks.classList.remove("is-open");
           navToggle.setAttribute("aria-expanded", "false");
-          navToggle.setAttribute("aria-label", navToggle.dataset.openLabel);
+          navToggle.setAttribute("aria-label", "Open menu");
         });
       });
     }
