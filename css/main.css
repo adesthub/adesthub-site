@@ -408,6 +408,8 @@ footer {
 }
 
 .footer-copy {
+  display: block;
+  width: 100%;
   text-align: center;
   margin-top: 28px;
 }
