@@ -1,1 +1,9 @@
 DirectoryIndex index.htm
+
+RewriteEngine On
+RewriteCond %{THE_REQUEST} \s/+index\.htm[\s?] [NC]
+RewriteRule ^index\.htm$ / [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^$ /index.htm [L]
