@@ -1,4 +1,5 @@
 DirectoryIndex index.htm
+ErrorDocument 404 /404.html
 
 RewriteEngine On
 RewriteCond %{THE_REQUEST} \s/+index\.htm[\s?] [NC]
